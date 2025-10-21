@@ -1,10 +1,9 @@
-inizia tutto da interfaces:
+It all starts with interfaces:
 
-1.  base contiene le interfacce per il layout (navbar, footer e meta tag comuni)
+1. Base contains the layout interfaces (navbar, footer, and common meta tags).
 
-2.  si crea un file di interfaccia per ogni pagina, con il suo stesso nome (ex: index.astro > index.interface.astro), qua si mettono traduzioni
-    e overwrite per i meta facendo ereditare da base.interface.ts
+2. Create an interface file for each page, with the same name (e.g., index.astro > index.interface.astro). Place translations there, and overwrite the meta data by inheriting from base.interface.ts.
 
-3.  dentro translations c'e' una cartella per ogni lingua, in esse, un oggetto di traduzione che eredita dalla interfaccia relativa
+3. Inside Translations, there's a folder for each language. Within it, there's a translation object that inherits from the relevant interface.
 
-4.  alla creazione della pagina dentro pages, inserire il layout, la content component nella slot e passare la traduzione
+4. When creating the page, insert the layout, the content component in the slot, and pass the translation.

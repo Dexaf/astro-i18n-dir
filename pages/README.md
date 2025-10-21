@@ -1,10 +1,11 @@
-per mantere ssr/ssg le pagine sono strutturate cosi:
+To maintain ssr/ssg, the pages are structured as follows:
 
-1.  Il layout Page contiente navbar, footer, slot per content e meta tag.
+1. The Page layout contains the navbar, footer, content slots, and meta tags.
 
-2.  Page prende come slot il contenuto effettivo della pagina.
+2. Page uses the actual page content as its slot.
 
-3.  Per condividere la struttura della pagina senza duplicarle, il contenuto verra tenuto dentro la cartella content.
-    Dentro le cartelle della lingua c'e' solo il file per il routing che passa la lingua e le stringhe di traduzione al contenuto e il layout
+3. To share the page structure without duplicating it, the content will be kept in the content folder.
 
-4.  Per la struttura dei file di traduzione riferirsi al README.md presenta dentro la cartella i18n
+Inside the language folders is only the routing file that passes the language and translation strings to the content and layout.
+
+4. For the structure of the translation files, refer to the README.md file in the i18n folder.
