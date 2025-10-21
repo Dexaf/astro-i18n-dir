@@ -1,0 +1,12 @@
+---
+import Page from "../../layout/Page.astro";
+import { getLangFromUrl } from "../../utils/lang/lang";
+import { translationsEn } from "../../i18n/translations/en/index";
+import IndexContent from "../content/IndexContent.astro";
+
+const lang = getLangFromUrl(Astro.url);
+---
+
+<Page translations={translationsEn} lang={lang}>
+	<IndexContent translations={translationsEn} />
+</Page>

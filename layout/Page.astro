@@ -1,0 +1,42 @@
+---
+import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.astro";
+import type { BaseTranslationInterface } from "../i18n/interfaces/base.interface";
+
+interface Props {
+	translations: BaseTranslationInterface;
+	lang: string;
+}
+
+const { translations, lang } = Astro.props;
+const t = translations.base;
+---
+
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{t.title}</title>
+		<meta name="description" content={t.description} />
+		<link rel="icon" type="image/x-icon" href="TODO" />
+
+		<!-- Open Graph -->
+		<meta property="og:title" content={t.title} />
+		<meta property="og:description" content={t.description} />
+		<meta property="og:image" content="TODO" />
+		<meta property="og:url" content="TODO" />
+		<meta property="og:type" content="website" />
+
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={t.title} />
+		<meta name="twitter:description" content={t.description} />
+		<meta name="twitter:image" content="TODO" />
+	</head>
+	<body>
+		<Navbar />
+		<slot />
+		<Footer />
+	</body>
+</html>
