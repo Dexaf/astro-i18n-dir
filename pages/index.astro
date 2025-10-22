@@ -1,16 +1,12 @@
 ---
+import IndexContent from "../content/IndexContent.astro";
+import { translationsIt } from "../i18n/translations/it";
+import Page from "../layout/Page.astro";
+import { getLangFromUrl } from "../utils/lang/lang";
 
+const lang = getLangFromUrl(Astro.url);
 ---
 
-<html lang="it">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Nethora - consulting</title>
-	</head>
-	<body>
-		<!-- TODO - doppia il file in it/index.astro qua dentro -->
-	</body>
-</html>
+<Page translations={translationsIt} lang={lang}>
+	<IndexContent translations={translationsIt} />
+</Page>
